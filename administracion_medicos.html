@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Administración</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Nav menu -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button">Cerrar menú</a>
+    <a href="perfil_medico.html" onclick="w3_close()" class="w3-bar-item w3-button">Página Personal</a>
+    <a href="administracion_medicos.html" onclick="w3_close()" class="w3-bar-item w3-button">Administración de Médicos</a>
+    <a href="Prueba_interfaz.html" onclick="w3_close()" class="w3-bar-item w3-button">Cerrar sesión</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-x w3-left" onclick="w3_open()">☰</div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<h1>
+    Medicos
+  </h1>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Nombre del medico
+          </th>
+          <th>
+            RFC
+          </th>
+          <th>
+            Cedula Profesional
+          </th>
+          <th>
+            Correo
+          </th>
+          <th>
+            Teléfono
+          </th>
+          <th>
+            Password
+          </th>
+          <th>
+            Rol
+          </th>
+          <th>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-title='Provider Name'>
+            Nomen Nescio
+          </td>
+          <td data-title='E-mail'>
+            XAXX010101000
+          </td>
+          <td data-title='E-mail'>
+            12345678
+          </td>
+          <td data-title='E-mail'>
+            example@mail.com
+          </td>
+          <td data-title='E-mail'>
+            5556569696
+          </td>
+          <td data-title='E-mail'>
+            ••••••••
+          </td>
+          <td data-title='E-mail'>
+            Administrador
+          </td>
+          <td class='Edit'>
+            <a class='button' href='#'>
+              Editar
+            </a>
+          </td>
+          <td class='Eliminar'>
+            <a class='button' href='#'>
+              Eliminar
+            </a>
+          </td>
+        </tr>
+        <tr>
+            <td data-title='Provider Name'>
+            John Smith
+              </td>
+              <td data-title='E-mail'>
+                XAXX010101001
+              </td>
+              <td data-title='E-mail'>
+                12345679
+              </td>
+              <td data-title='E-mail'>
+                example2@mail.com
+              </td>
+              <td data-title='E-mail'>
+                5556569697
+              </td>
+              <td data-title='E-mail'>
+                ••••••••
+              </td>
+              <td data-title='E-mail'>
+                Usuario
+              </td>
+              <td class='Edit'>
+                <a class='button' href='#'>
+                  Editar
+                </a>
+              </td>
+              <td class='Eliminar'>
+                <a class='button' href='#'>
+                  Eliminar
+                </a>
+              </td>
+        </tr>
+        <tr>
+            <td data-title='Provider Name'>
+                Ashok Kumar
+                  </td>
+                  <td data-title='E-mail'>
+                    XAXX010101002
+                  </td>
+                  <td data-title='E-mail'>
+                    12345680
+                  </td>
+                  <td data-title='E-mail'>
+                    example3@mail.com
+                  </td>
+                  <td data-title='E-mail'>
+                    5556569690
+                  </td>
+                  <td data-title='E-mail'>
+                    ••••••••
+                  </td>
+                  <td data-title='E-mail'>
+                    Usuario
+                  </td>
+                  <td class='Edit'>
+                    <a class='button' href='#'>
+                      Editar
+                    </a>
+                  </td>
+                  <td class='Eliminar'>
+                    <a class='button' href='#'>
+                      Eliminar
+                    </a>
+                  </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <form action="EjemploPaciente.html" id="loginForm">
+ 
+    <div class="form-group1">
+    </div>
+    <br>
+    <br>
+    <div class="form-group1">
+      <input type="button" id="agregarMedicoBtn" value="Agregar Medico">
+    </div>
+  </form>
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <h2>Datos del paciente</h2>
+      <div class="formbold-mb-3">
+        <div>
+          <label for="fecha" class="formbold-form-label">
+            Nombre
+          </label>
+          <input type="text" name="fecha" id="fecha" class="formbold-form-input" placeholder="Jackie Joe"/>
+        </div>
+      </div>
+
+    <div class="formbold-input-flex">
+      <div>
+        <label for="peso" class="formbold-form-label"> RFC</label>
+        <input type="text" name="peso" id="peso" class="formbold-form-input" placeholder="xxxx000000000"/>
+      </div>
+      <div>
+        <label for="altura" class="formbold-form-label"> Cedula Profesional</label>
+        <input type="text" name="altura" id="altura" class="formbold-form-input" placeholder="00000000"/> 
+      </div>
+    </div>
+
+    <div class="formbold-input-flex">
+        <div>
+          <label for="temperatura" class="formbold-form-label"> Correo</label>
+          <input type="text" name="temperatura" id="temperatura" class="formbold-form-input" placeholder="asdf@mail.com"/>
+        </div>
+        <div>
+          <label for="ritmo" class="formbold-form-label"> Teléfono</label>
+          <input type="text" name="ritmo" id="ritmo" class="formbold-form-input" placeholder="0000000000"/> 
+        </div>
+    </div>
+
+    <div class="formbold-input-flex">
+        <div>
+          <label for="saturacion" class="formbold-form-label"> Password</label>
+          <input type="text" name="saturacion" id="saturacion" class="formbold-form-input" placeholder="••••••••"/>
+        </div>
+        <div>
+          <label for="glucosa" class="formbold-form-label"> Rol</label>
+          <input type="text" name="glucosa" id="glucosa" class="formbold-form-input" placeholder="Admin/User"/> 
+        </div>
+    </div>
+      <button class="save-button">Guardar</button>
+    </div>
+  </div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Medica Temp</p>
+</footer>
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    const agregarMedicoBtn = document.querySelector('#agregarMedicoBtn');
+    const modal = document.querySelector('#editModal');
+    const loginForm = document.querySelector('#loginForm');
+
+    agregarMedicoBtn.addEventListener('click', function() {
+      modal.classList.add('show');
+    });
+
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      window.location.href = "dashboard.html";
+    });
+
+    const saveButton = document.querySelector('.save-button');
+    saveButton.addEventListener('click', function() {
+      // Lógica para guardar los datos del médico
+      modal.classList.remove('show');
+    });
+    </script>
+</body>
+</html>
