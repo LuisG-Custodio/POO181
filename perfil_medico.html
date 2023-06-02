@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Perfil Personal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Nav menu -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button">Cerrar menú</a>
+    <a href="perfil_medico.html" onclick="w3_close()" class="w3-bar-item w3-button">Página Personal</a>
+    <a href="administracion_medicos.html" onclick="w3_close()" class="w3-bar-item w3-button">Administración de Médicos</a>
+    <a href="Prueba_interfaz.html" onclick="w3_close()" class="w3-bar-item w3-button">Cerrar sesión</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-x w3-left" onclick="w3_open()">☰</div>
+    </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Nomen Nescio</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p>RFC: XAXX010101000</p>
+          <p>Fecha de Nacimiento: 01/01/1990</p>
+          <p>example@mail.com</p>
+          <p>5558886593</p>
+          <p>Departamento: Urgencias</p>
+          <p>Consultorio: 1</p>
+          <p>Cedula: 12345678</p>
+          <hr>
+
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+    <!-- Modal -->
+      <div class="modal" id="editModal">
+          <div class="modal-content">
+            <h2>Datos del paciente</h2>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <label for="apellidoP">Apellido Paterno:</label>
+              <input type="text" id="apellidoP" name="apellidoP" placeholder="Apellido Paterno">
+            </div>
+            <div class="form-group">
+              <label for="apellidoM">Apellido Materno:</label>
+              <input type="text" id="apellidoM" name="apellidoM" placeholder="Apellido Materno">
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo:</label>
+              <input type="email" id="correo" name="correo" placeholder="Correo">
+            </div>
+            <div class="form-group">
+              <label for="correo">Enfermedades crónicas:</label>
+              <input type="email" id="correo" name="correo">
+            </div>
+            <div class="form-group">
+              <label for="correo">Alergias:</label>
+              <input type="email" id="correo" name="correo">
+            </div>
+            <div class="form-group">
+              <label for="correo">Antecedentes Familiares:</label>
+              <input type="email" id="correo" name="correo">
+            </div>
+            <button class="save-button">Guardar</button>
+          </div>
+        </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">Pacientes</h2>
+        <div class="w3-container">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Nombre del paciente
+                </th>
+                <th>
+                  Citas
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title='Provider Name'>
+                    <a href="expedientes.html">John Doe</a>
+                </td>
+                <td data-title='E-mail'>
+                    <ul>
+                        <li><a href="">01/05/2023</a></li>
+                        <li><a href="">02/04/2023</a></li>
+                        <li><a href="">10/03/2023</a></li>
+                        <li><a href="">07/02/2023</a></li>
+                      </ul>
+                </td>
+              </tr>
+              <tr>
+                <td data-title='Provider Name'>
+                  Jane Doe
+                </td>
+                <td data-title='E-mail'>
+                    <ul>
+                        <li><a href="">20/05/2023</a></li>
+                        <li><a href="">02/05/2023</a></li>
+                        <li><a href="">17/04/2023</a></li>
+                        <li><a href="">03/04/2023</a></li>
+                      </ul>
+                </td>
+              </tr>
+              <tr>
+                <td data-title='Provider Name'>
+                  Mary Majors
+                </td>
+                <td data-title='E-mail'>
+                    <ul>
+                        <li><a href="">01/05/2023</a></li>
+                        <li><a href="">02/04/2023</a></li>
+                      </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <hr>
+        </div>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Medica Temp</p>
+</footer>
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    const agregarMedicoBtn = document.querySelector('#agregarMedicoBtn');
+    const modal = document.querySelector('#editModal');
+    const loginForm = document.querySelector('#loginForm');
+
+    agregarMedicoBtn.addEventListener('click', function() {
+      modal.classList.add('show');
+    });
+
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      window.location.href = "dashboard.html";
+    });
+
+    const saveButton = document.querySelector('.save-button');
+    saveButton.addEventListener('click', function() {
+      // Lógica para guardar los datos del médico
+      modal.classList.remove('show');
+    });
+    </script>
+</body>
+</html>
