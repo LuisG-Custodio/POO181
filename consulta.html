@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Expediente Paciente</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Nav menu -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button">Cerrar menú</a>
+    <a href="perfil_medico.html" onclick="w3_close()" class="w3-bar-item w3-button">Página Personal</a>
+    <a href="administracion_medicos.html" onclick="w3_close()" class="w3-bar-item w3-button">Administración de Médicos</a>
+    <a href="Prueba_interfaz.html" onclick="w3_close()" class="w3-bar-item w3-button">Cerrar sesión</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-x w3-left" onclick="w3_open()">☰</div>
+    </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>John Doe</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p>Medico titular: Nomen Nescio</p>
+          <p>Fecha de Nacimiento: 01/01/1990</p>
+          <p>example@mail.com</p>
+          <p>5558886593</p>
+          <hr>
+
+          <p class="w3-large"><b>Enfermedades cronicas</b></p>
+          <p>Ninguno</p>
+
+          <p class="w3-large w3-text-theme"><b>Alergias</b></p>
+          <p>Ninguna</p>
+          
+          <p class="w3-large w3-text-theme"><b>Antecedentes familiares</b></p>
+          <p>Diabetes</p>
+          <p>Cancer</p>
+          <br>
+
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">Consulta en curso</h2>
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+
+                <div class="formbold-mb-3">
+                    <div>
+                      <label for="fecha" class="formbold-form-label">
+                        Fecha (dd/mm/aaaa)
+                      </label>
+                      <input type="text" name="fecha" id="fecha" class="formbold-form-input"/>
+                    </div>
+                  </div>
+          
+                <div class="formbold-input-flex">
+                  <div>
+                    <label for="peso" class="formbold-form-label"> Peso (kg)</label>
+                    <input type="text" name="peso" id="peso" class="formbold-form-input"/>
+                  </div>
+                  <div>
+                    <label for="altura" class="formbold-form-label"> Altura (cm)</label>
+                    <input type="text" name="altura" id="altura" class="formbold-form-input"/> 
+                  </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                      <label for="temperatura" class="formbold-form-label"> Temperatura (°C)</label>
+                      <input type="text" name="temperatura" id="temperatura" class="formbold-form-input"/>
+                    </div>
+                    <div>
+                      <label for="ritmo" class="formbold-form-label"> Ritmo cardiaco (bpm)</label>
+                      <input type="text" name="ritmo" id="ritmo" class="formbold-form-input"/> 
+                    </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                      <label for="saturacion" class="formbold-form-label"> Saturacion de oxígeno (%)</label>
+                      <input type="text" name="saturacion" id="saturacion" class="formbold-form-input"/>
+                    </div>
+                    <div>
+                      <label for="glucosa" class="formbold-form-label"> Glucosa (mg/dL)</label>
+                      <input type="text" name="glucosa" id="glucosa" class="formbold-form-input"/> 
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">Sintomatología</h2>
+        <div class="w3-container">
+            <div class="formbold-mb-3">
+                <div>
+                  <input type="text" name="fecha" id="fecha" class="formbold-form-input2"/>
+                </div>
+              </div>
+        </div>
+        <hr>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">Diagnóstico</h2>
+        <div class="w3-container">
+            <div class="formbold-mb-3">
+                <div>
+                  <input type="text" name="fecha" id="fecha" class="formbold-form-input2"/>
+                </div>
+              </div>
+        </div>
+        <hr>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">Receta</h2>
+        <div class="w3-container">
+            <div class="formbold-mb-3">
+                <div class="formbold-mb-3">
+                    <div>
+                      <label for="fecha" class="formbold-form-label">
+                        Nombre del medicamento
+                      </label>
+                      <input type="text" name="fecha" id="fecha" class="formbold-form-input"/>
+                    </div>
+                </div>
+                <div>
+                  <label for="fecha" class="formbold-form-label">
+                    Indicaciones
+                  </label>
+                  <input type="text" name="fecha" id="fecha" class="formbold-form-input2"/>
+                </div>
+              </div>
+            <p><button type="button">Añadir</button></p>
+        </div>
+        <hr>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">Orden de examenes médicos</h2>
+        <div class="w3-container">
+            <div class="formbold-mb-3">
+                <div>
+                  <input type="text" name="fecha" id="fecha" class="formbold-form-input2"/>
+                </div>
+              </div>
+        </div>
+        <hr>
+      </div>
+
+      <a href="expedientes.html">
+        <p><button type="button">Guardar</button></p>
+        </a>
+
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Medica Temp</p>
+</footer>
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+</body>
+</html>
