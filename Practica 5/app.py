@@ -64,6 +64,15 @@ def eliminar(id):
     consulId= CC.fetchone()
     return render_template('eliminarAlbum.html',album = consulId)
 
+@app.route('/borrado/<id>', methods=['POST'])
+def borrado(id):
+    if request.method == 'POST':
+        CS= mysql.connection.cursor()
+        CS.execute('delete from tb_albums where id=%s',(id))
+        mysql.connection.commit()           
+    flash('Los datos del album fue eliminados correctamente')
+    return redirect(url_for('index'))
+
 #ejecución del servidor en el puerto 5000
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
