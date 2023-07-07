@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Fruta</title>
+</head>
+<body>
+    
+    <h1>Buscar Fruta</h1>
+    <br>
+    <br>
+    <form action="/realizarbusqueda" method="POST">
+        <select class="input-box" name="txtId">
+            <option value="0" type="text" selected>Selecccione una fruta</option>
+            {%for frut in listaFrutas %}
+            <option value="{{frut.0}}" type="text">{{frut.1}}</option>
+            {%endfor%}
+        </select>
+        <button type="submit">Buscar</button>
+        <a href=/><button type="button">Regresar</button></a>
+        <table>
+            <thead>
+                <tr>
+                    <td>Id: </td>
+                    <td>Fruta: </td>
+                    <td>Temporada: </td>
+                    <td>Precio: </td>
+                    <td>Stock: </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{Fruta.0}}</td>
+                    <td>{{Fruta.1}}</td>
+                    <td>{{Fruta.2}}</td>
+                    <td>{{Fruta.3}}</td>
+                    <td>{{Fruta.4}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>

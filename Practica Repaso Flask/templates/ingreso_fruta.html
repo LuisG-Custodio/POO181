@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Frutas</title>
+</head>
+
+<body>
+
+    <br>
+    <br>
+    <h1>Registro de Frutas</h1>
+    <br>
+    <br>
+    <form action="/guardarfruta" method="POST">
+
+        <input type="text" name="txtFruta" placeholder="Escribe nombre de la fruta">
+        <input type="text" name="txtTemporada" placeholder="Escribe temporada de la fruta">
+        <input type="number" name="txtPrecio" placeholder="Escribe precio de venta" step="any">
+        <input type="number" name="txtStock" placeholder="Escribe stock de la fruta">
+        <button type="submit"> Guardar</button>
+        <a href=/><button type="button">Cancelar</button></a>
+        
+    </form>
+</body>
+
+</html>
