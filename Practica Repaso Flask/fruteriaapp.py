@@ -49,7 +49,7 @@ def actualizarfruta(id):
         Vprecio=request.form['txtPrecio']
         Vstock=request.form['txtStock']
         CC= mysql.connection.cursor()
-        CC.execute('update tbFrutas set fruta=%s, temporada=%s, precio=%s, stock=%s where id=%s',(Vfruta,Vtemporada,Vprecio,Vstock,id))
+        CC.execute('update tbFrutas set fruta=%s, temporada=%s, precio=%s, stock=%s where id=%s',(Vfruta,Vtemporada,Vprecio,Vstock,id,))
         mysql.connection.commit()           
     flash('Los datos de la fruta '+ Vfruta +' fueron actualizados correctamente')
     return redirect(url_for('index'))
@@ -66,7 +66,7 @@ def eliminar(id):
 def borrado(id):
     if request.method == 'POST':
         CC= mysql.connection.cursor()
-        CC.execute('delete from tbFrutas where id=%s',(id))
+        CC.execute('delete from tbFrutas where id=%s',(id,))
         mysql.connection.commit()           
     flash('Los datos de la fruta fueron eliminados correctamente')
     return redirect(url_for('index'))
@@ -76,7 +76,7 @@ def busquedafruta(id):
     CC= mysql.connection.cursor()
     CC.execute('select id,fruta from tbFrutas')
     idFrutas= CC.fetchall()
-    CC.execute('select * from tbFrutas where id=%s',id)
+    CC.execute('select * from tbFrutas where id=%s',(id,))
     regFruta= CC.fetchone()
     return render_template('busqueda_fruta.html',listaFrutas = idFrutas,Fruta = regFruta)
 
