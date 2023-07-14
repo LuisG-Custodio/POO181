@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floreria</title>
+</head>
+<body>
+    <h1>Buscador Floreria</h1>
+    <br>
+    <br>
+    <form action="/buscadorflor" method="POST">
+        <input type="text" name="txtNombre" placeholder="Nombre">
+        <button type="submit">Buscar</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>nombre</td>
+                <td>cantidad</td>
+                <td>precio</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{flor.0}}</td>
+                <td>{{flor.1}}</td>
+                <td>{{flor.2}}</td>
+                <td>{{flor.3}}</td>
+                <td>
+                    <a href=/editarflor/{{flor.0}}><button>Editar</button></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a href=/><button type="button">Cancelar</button></a>
+</body>
+</html>

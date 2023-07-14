@@ -1,0 +1,27 @@
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Flor</title>
+</head>
+<body>
+    
+    <h1>Flor a editar</h1>
+    <br>
+    <br>
+    <form action="/actualizarflor/{{flor.0}}" method="POST">
+
+        <input type="text" name="txtNombre" value="{{flor.1}}">
+        <input type="text" name="txtCantidad" value="{{flor.1}}">
+        <input type="text" name="txtPrecio" value="{{flor.1}}" step="any">
+
+        <button type="submit">Actualizar</button>
+        <a href=/><button type="button">Cancelar</button></a>
+        
+    </form>
+
+</body>
+</html>
