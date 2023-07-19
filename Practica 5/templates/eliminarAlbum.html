@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Album</title>
-</head>
-<body>
-    
-    <h1>Album a editar</h1>
+{% extends 'template.html' %}
+{% block body %}
+    <h1>Album a Eliminar</h1>
     <br>
     <br>
     <form action="/borrado/{{album.0}}" method="POST">
@@ -28,12 +21,10 @@
                     <td>{{album.3}}</td>
                     <td>
                         <button type="submit"> Eliminar</button>
-                        <button type="button"><a href="http://localhost:5000">Cancelar</button>
+                        <a href=/><button type="button">Cancelar</button></a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </form>
-    
-</body>
-</html>
+{% endblock %}
